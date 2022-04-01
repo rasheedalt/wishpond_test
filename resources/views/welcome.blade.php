@@ -20,7 +20,7 @@
             #quoteContainer {
                width: 100%;
                background-color: #fffaf0;
-               height: 400px;
+               height: 300px;
             }
             li{
                 list-style-type: none;
@@ -42,9 +42,9 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <a href="#" onclick="getAndDisplayQuotes()" class="btn btn-sm btn-primary mb-3" ><i class="fa-solid fa-arrows-rotate"></i> refresh</a>
+                                    <a href="javascript:void(0)" onclick="getAndDisplayQuotes()" class="btn btn-sm btn-primary mb-3" ><i class="fa-solid fa-arrows-rotate"></i> refresh</a>
                                     <div id="quoteContainer"><span id="quote"></span></div>
-                                    <small class="float-right">- Kanye West</small>
+                                    <p class="float-right font-weight-bold">- Kanye West</p>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                     type: 'GET',
                     success: function(res) {
                         quotes = res.data.quotes;
-                        console.log(quotes);
+                        
                         if(quotes.length > 0){
                             let itemsToDisplay = '';
                             quotes.forEach( quo => {

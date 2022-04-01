@@ -31,8 +31,6 @@ class QuoteController extends Controller
             foreach($quoteKeys as $key){
                 $quotes[] = $generalQuotes[$key];
             }
-            // return $quotes;
-
 
             return ApiResponse::validResponse('successfull', ['quotes' => $quotes]);
         }catch(Exception $e){
