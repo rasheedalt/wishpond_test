@@ -12,3 +12,5 @@ run php artisan key:generate
 run php artisan config:cache
 
 run php artisan serve to start server
+
+run php artisan:test to run tests
